@@ -11,23 +11,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'SGFX - Trade Forex with 100% Deposit Bonus',
   description: 'Trade Forex with SGFX. Get up to $25,000 deposit bonus. SCA & FSC Regulated. Secure and Protected. Execution under 15ms.',
-  generator: 'v0.app',
+  generator: 'ganesh unhale',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/icon.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/icon.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      
     ],
-    apple: '/apple-icon.png',
+    apple: '/icon.png',
   },
 }
 
