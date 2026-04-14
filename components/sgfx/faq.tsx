@@ -35,7 +35,7 @@ export function FAQ() {
         backgroundColor: "#2a2a2a",
       }}>
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-[#001523] text-lg md:text-xl font-bold text-center mb-6">
+        <h2 className="text-[#001523] text-2xl md:text-2xl px-5 font-bold text-center mb-6">
           Frequently Asked Questions
         </h2>
 
@@ -53,14 +53,14 @@ export function FAQ() {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className={`w-full flex items-center justify-between p-3 text-left transition-colors ${
+                  className={`w-full flex items-center justify-between p-2 text-left transition-colors ${
                     isOpen
                       ? "bg-[#001523] hover:bg-[#002a3d]"
                       : "bg-white hover:bg-gray-50"
                   }`}
                 >
                   <span
-                    className={`font-medium text-xs ${
+                    className={`font-medium text-md md:text-sm ${
                       isOpen ? "text-white" : "text-[#001523]"
                     }`}
                   >
@@ -75,7 +75,7 @@ export function FAQ() {
 
                 {isOpen && (
                   <div className="px-3 pb-3 bg-[#001523]">
-                    <p className="text-gray-300 text-[11px] leading-relaxed">
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

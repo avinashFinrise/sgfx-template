@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <header className="bg-white py-0 px-4 md:px-8 lg:px-12 flex items-center justify-between">
+    <header className="bg-white py-0 px-4 md:px-8 lg:px-12 flex items-center justify-between sticky top-0 z-50 border-b border-gray-200">
       <Link href="/" className="flex items-center">
         <Image
           src="/images/sgfx-logo-filled.png"
