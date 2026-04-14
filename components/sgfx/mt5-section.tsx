@@ -8,7 +8,7 @@ export function MT5Section() {
           {/* Left Content */}
           <div className="py-4 md:py-8 lg:pt-12 text-center md:text-left">
             <h2 className="text-[#001523] text-xl md:text-2xl lg:text-[32px] font-bold mb-4 leading-tight text-center px-8 md:px-0 md:text-left">
-              Experience seamless trading<br className="hidden md:block" />
+              Experience seamless trading <br className="hidden md:block" />
               with SGFX MT5.
             </h2>
             

@@ -3,7 +3,7 @@ import Image from "next/image"
 const steps = [
   {
     step: "Step 1: Register",
-    image: "/images/register-step.png",
+    image: "/images/Deposite.png",
     alt: "SGFX Registration Screen",
     title: "Open your account",
     description: "Complete your SGFX account opening under 3 minutes. Only email needed.",
@@ -11,7 +11,7 @@ const steps = [
   },
   {
     step: "Step 2: Fund",
-    image: "/images/fund-phone.png",
+    image: "/images/payment.png",
     alt: "SGFX Payment Methods",
     title: "Deposit funds securely",
     description: "Fund your trading account using 5+ payment methods & enjoy 100% deposit bonus.",
@@ -19,7 +19,7 @@ const steps = [
   },
   {
     step: "Step 3: Trade",
-    image: "/images/trade-phone.png",
+    image: "/images/trading.png",
     alt: "SGFX Trading Platform",
     title: "Start trading",
     description: "Access global markets with 200+ tradeable instruments.",
@@ -65,8 +65,8 @@ export function AccountOpening() {
 
               {/* Content — fixed min-height for alignment */}
               <div className="bg-white px-4 pb-5 pt-4 flex flex-col text-left flex-1">
-                <h3 className="text-[#001523] font-bold text-sm mb-1">{step.title}</h3>
-                <p className="text-[#424244] font-bold text-xs mb-4 leading-relaxed max-w-[220px] ">
+                <h3 className="text-[#001523] font-bold text-md mb-1">{step.title}</h3>
+                <p className="text-[#424244] font-bold text-sm mb-4 leading-relaxed max-w-[300px] ">
                   {step.description}
                 </p>
 

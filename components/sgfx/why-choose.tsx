@@ -67,7 +67,7 @@ export function WhyChoose() {
         {/* Logo — mobile only, above the features */}
        <div className="relative flex justify-center mb-5 overflow-hidden md:hidden">
   <Image
-    src="/images/sgfx-logo.png"
+    src="/images/SGFX-logo-wave.gif"
     alt="SGFX logo"
     width={260}
     height={78}
@@ -139,7 +139,7 @@ export function WhyChoose() {
         {/* Logo watermark — desktop only */}
         <div className="relative hidden md:flex justify-center mb-4 overflow-hidden">
           <Image
-            src="/images/sgfx-logo.png"
+            src="/images/SGFX-logo-wave.gif"
             alt="sgfx logo watermark"
             width={200}
             height={60}
