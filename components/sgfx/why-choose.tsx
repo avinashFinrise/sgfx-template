@@ -5,13 +5,13 @@ import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
-    icon: <div className="text-[#13AA7A] text-2xl md:text-3xl font-bold">0%</div>,
+    icon: <div className="text-[#13AA7A] text-3xl md:text-4xl font-bold">0%</div>,
     title: "Zero Commission",
     subtitle: "and Swap Free"
   },
   {
     icon: (
-      <svg className="w-7 h-7 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-9 h-9 md:w-10 md:h-10 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M3 3v18h18" /><path d="M7 14l4-4 4 4 5-6" />
       </svg>
     ),
@@ -20,7 +20,7 @@ const features = [
   },
   {
     icon: (
-      <svg className="w-7 h-7 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-9 h-9 md:w-10 md:h-10 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="9" cy="7" r="4" />
         <path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
         <path d="M16 3.13a4 4 0 010 7.75" /><path d="M21 21v-2a4 4 0 00-3-3.85" />
@@ -31,7 +31,7 @@ const features = [
   },
   {
     icon: (
-      <svg className="w-7 h-7 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="w-9 h-9 md:w-10 md:h-10 text-[#13AA7A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M3 3v18h18" />
         <rect x="7" y="10" width="3" height="8" fill="currentColor" stroke="none" />
         <rect x="12" y="6" width="3" height="12" fill="currentColor" stroke="none" />
@@ -61,13 +61,13 @@ export function WhyChoose() {
   return (
     <section className="bg-[#000000] py-6 md:py-8 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto max-w-3xl">
-<h2 className="text-white text-2xl md:text-xl font-bold text-center mb-6 mx-6">
+<h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-6 mx-6">
           Why Traders choose SGFX?
         </h2>
         {/* Logo — mobile only, above the features */}
        <div className="relative flex justify-center mb-5 overflow-hidden md:hidden">
   <Image
-    src="/images/SGFX-logo-wave.gif"
+    src="/images/SGFX-Logo-wave.gif"
     alt="SGFX logo"
     width={260}
     height={78}
@@ -89,36 +89,43 @@ export function WhyChoose() {
               key={index}
               className="bg-linear-to-bl from-[#156AE4] to-[#001523] rounded-lg p-4 text-center flex flex-col items-center justify-center h-40"
             >
-              <div className="w-12 h-12 rounded-full bg-[#156AE4]/10 flex items-center justify-center mb-2">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-2">
                 {feature.icon}
               </div>
-              <h3 className="text-white text-xs font-semibold leading-tight">{feature.title}</h3>
-              <p className="text-white text-xs font-semibold leading-tight">{feature.subtitle}</p>
+              <h3 className="text-white text-md font-semibold leading-tight">{feature.title}</h3>
+              <p className="text-white text-md font-semibold leading-tight">{feature.subtitle}</p>
             </div>
           ))}
         </div>
 
         {/* Mobile carousel */}
-<div className="md:hidden mb-4 px-8">
+<div className="md:hidden mb-4 px-9">
   <div className="relative overflow-hidden rounded-lg h-44">
-    {features.map((feature, index) => (
-      <div
-        key={index}
-        className={`absolute inset-0 bg-linear-to-bl from-[#156AE4] to-[#001523] rounded-lg p-5 flex flex-col items-center justify-center transition-all duration-500 ease-in-out
-          ${index === current
-            ? "opacity-100 translate-x-0"
-            : index < current
-            ? "opacity-0 -translate-x-8 pointer-events-none"
-            : "opacity-0 translate-x-8 pointer-events-none"
-          }`}
-      >
-        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-1">
-          {feature.icon}
+    
+    <div
+      className="flex transition-transform duration-500 ease-in-out"
+      style={{
+        transform: `translateX(-${current * 100}%)`,
+      }}
+    >
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className="min-w-full bg-linear-to-bl from-[#156AE4] to-[#001523] rounded-lg px-4 py-8 flex flex-col items-center justify-center"
+        >
+          <div className="w-14 h-14 rounded-full flex items-center justify-center mb-1">
+            {feature.icon}
+          </div>
+          <h3 className="text-white text-md font-semibold text-center">
+            {feature.title}
+          </h3>
+          <p className="text-white text-md font-semibold text-center">
+            {feature.subtitle}
+          </p>
         </div>
-        <h3 className="text-white text-xs font-semibold leading-tight text-center">{feature.title}</h3>
-        <p className="text-white text-xs font-semibold leading-tight text-center">{feature.subtitle}</p>
-      </div>
-    ))}
+      ))}
+    </div>
+
   </div>
 
   {/* Dot indicators */}
@@ -139,11 +146,11 @@ export function WhyChoose() {
         {/* Logo watermark — desktop only */}
         <div className="relative hidden md:flex justify-center mb-4 overflow-hidden">
           <Image
-            src="/images/SGFX-logo-wave.gif"
+            src="/images/SGFX-Logo-wave.gif"
             alt="sgfx logo watermark"
             width={200}
             height={60}
-            className="w-50 md:w-58 h-auto"
+            className="w-60 md:w-78 h-auto"
            
              style={{
       filter: "brightness(1.4) contrast(0.85) drop-shadow(0 0 12px rgba(21,106,228,0.3))",
@@ -153,7 +160,7 @@ export function WhyChoose() {
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-[#156AE4] hover:bg-[#1259c0] text-white font-semibold px-4 py-1 rounded-2xl text-md transition-colors">
+          <button className="bg-[#156AE4] hover:bg-[#1259c0] text-white font-semibold px-5 py-2 rounded-2xl text-md transition-colors">
             TRADE NOW
           </button>
         </div>

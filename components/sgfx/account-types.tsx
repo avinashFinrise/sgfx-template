@@ -1,17 +1,13 @@
 "use client"
 
 import { useState, useRef } from "react"
+import Image from "next/image"
 
 const accountTypes = [
   {
     name: "Standard",
     subtitle: "Spreads From 1.5 pips",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <path d="M3 9h18M9 21V9" />
-      </svg>
-    ),
+    icon: "/images/standard-icon.png",
     features: [
       { label: "Min. deposit", value: "$100" },
       { label: "Min. volume per trade", value: "0.01" },
@@ -25,12 +21,7 @@ const accountTypes = [
   {
     name: "Elite",
     subtitle: "Spreads From 0.8 pips",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
+    icon: "/images/elite-icon.png",
     features: [
       { label: "Min. deposit", value: "$5000" },
       { label: "Min. volume per trade", value: "0.01" },
@@ -44,12 +35,7 @@ const accountTypes = [
   {
     name: "ECN",
     subtitle: "Raw Spreads From 0 pips",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
-      </svg>
-    ),
+    icon: "/images/ecn-icon.png",
     features: [
       { label: "Min. deposit", value: "$25000" },
       { label: "Min. volume per trade", value: "0.01" },
@@ -94,7 +80,7 @@ export function AccountTypes() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-[#0B3B73] via-[#156AE4] to-[#0A1F3F] py-12 px-4 md:px-8">
+    <section className="bg-gradient-to-br from-[#0B3B73] via-[#156AE4] to-[#0A1F3F] py-10 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl">
 
         {/* Title */}
@@ -106,7 +92,7 @@ export function AccountTypes() {
         <div className="md:hidden">
           {/* pt-6 gives room for the overflowing icon above the card */}
           <div
-            className="pt-6"
+            className="pt-2"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
@@ -140,7 +126,7 @@ export function AccountTypes() {
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 pt-6">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 pt-2">
           {accountTypes.map((account, index) => (
             <AccountCard key={index} account={account} />
           ))}
@@ -160,32 +146,32 @@ function AccountCard({ account }: { account: typeof accountTypes[0] }) {
 
           {/* Icon — positioned relative to the outer wrapper so overflow is visible */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-            <div className="w-10 h-10 rounded-full border border-white/50 bg-[#0B3B73] flex items-center justify-center">
-              {account.icon}
+            <div className="w-13 h-13 rounded-full border border-white/50 bg-[#000000] flex items-center justify-center">
+              <Image src={account.icon} alt={account.name} width={34} height={34} />
             </div>
           </div>
 
           {/* Header */}
           <div className="text-center mt-6 mb-5">
-            <h3 className="text-xl font-bold">{account.name}</h3>
-            <p className="text-xs text-white/80">{account.subtitle}</p>
+            <h3 className="text-2xl font-bold">{account.name}</h3>
+            <p className="text-xl text-white/80">{account.subtitle}</p>
           </div>
 
           {/* Features */}
           <div className="space-y-2 text-xs mb-6">
             {account.features.map((feature, idx) => (
               <div key={idx} className="flex justify-between border-b border-white/10 pb-1">
-                <span className="flex items-center gap-2 text-white/80">
-                  <span className="text-green-400 text-[10px]">✔</span>
+                <span className="flex items-center text-base gap-2 text-white/80">
+                  <span className="text-green-400 text-[12px]">✔</span>
                   {feature.label}
                 </span>
-                <span className="font-semibold">{feature.value}</span>
+                <span className="font-semibold text-base">{feature.value}</span>
               </div>
             ))}
           </div>
 
           {/* Button */}
-          <button className="w-full bg-[#1F2937] hover:bg-black text-white font-semibold py-2 rounded-full text-sm transition-colors">
+          <button className="w-full bg-[#1F2937] hover:bg-black text-white font-semibold py-2 rounded-full text-lg transition-colors">
             Open Account
           </button>
 

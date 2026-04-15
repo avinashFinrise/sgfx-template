@@ -31,7 +31,7 @@ export function AccountOpening() {
   return (
     <section className="bg-[#EEEEEE] py-8 md:py-12 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-[#001523] text-2xl md:text-2xl font-bold text-center mb-6">
+        <h2 className="text-[#001523] text-3xl md:text-4xl font-bold text-center mb-6">
           Fast Account Opening
         </h2>
 
@@ -40,8 +40,8 @@ export function AccountOpening() {
           {steps.map((step, index) => (
             <div key={index} className="rounded-xl overflow-hidden border border-gray-100 shadow-sm flex flex-col">
               {/* Dark Header Badge */}
-              <div className="bg-[#0a1628]  pt-2 pb-0 flex flex-col items-center">
-                <span className="text-white text-md font-semibold tracking-wide mb-2">{step.step}</span>
+              <div className="bg-[#0a1628]  pt-1 pb-0 flex flex-col items-center">
+                <span className="text-white text-lg font-semibold tracking-wide mb-1">{step.step}</span>
                 {/* Image touches the bottom of this section */}
                 <div
                   className="w-full flex justify-center items-end"
@@ -65,12 +65,12 @@ export function AccountOpening() {
 
               {/* Content — fixed min-height for alignment */}
               <div className="bg-white px-4 pb-5 pt-4 flex flex-col text-left flex-1">
-                <h3 className="text-[#001523] font-bold text-md mb-1">{step.title}</h3>
-                <p className="text-[#424244] font-bold text-sm mb-4 leading-relaxed max-w-[300px] ">
+                <h3 className="text-[#001523] font-bold text-lg mb-1">{step.title}</h3>
+                <p className="text-[#424244] font-bold text-md mb-4 leading-relaxed max-w-[300px] ">
                   {step.description}
                 </p>
 
-                <button className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-2 py-1 rounded-2xl text-[14px] transition-colors mx-auto w-32">
+                <button className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-4 py-2 rounded-2xl text-[15px] transition-colors mx-auto w-36">
                   {step.cta}
                 </button>
               </div>
