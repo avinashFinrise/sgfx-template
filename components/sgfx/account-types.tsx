@@ -7,7 +7,7 @@ const accountTypes = [
   {
     name: "Standard",
     subtitle: "Spreads From 1.5 pips",
-    icon: "/images/standard-icon.png",
+    icon: "/images/Standard-AC.svg",
     features: [
       { label: "Min. deposit", value: "$100" },
       { label: "Min. volume per trade", value: "0.01" },
@@ -21,7 +21,7 @@ const accountTypes = [
   {
     name: "Elite",
     subtitle: "Spreads From 0.8 pips",
-    icon: "/images/elite-icon.png",
+    icon: "/images/Elite-AC.svg",
     features: [
       { label: "Min. deposit", value: "$5000" },
       { label: "Min. volume per trade", value: "0.01" },
@@ -35,7 +35,7 @@ const accountTypes = [
   {
     name: "ECN",
     subtitle: "Raw Spreads From 0 pips",
-    icon: "/images/ecn-icon.png",
+    icon: "/images/ECN-AC.svg",
     features: [
       { label: "Min. deposit", value: "$25000" },
       { label: "Min. volume per trade", value: "0.01" },

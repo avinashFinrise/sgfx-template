@@ -21,56 +21,55 @@ const testimonials = [
   },
   {
     name: "Ahmed Khan",
-    text: "Great experience with SGFX so far. The platform is easy to use, spreads are tight, and withdrawals are fast. Perfect for beginners and experienced traders alike.",
+    text: "I’ve had a great experience with SGFX so far. The platform is very easy to navigate, spreads are competitive, and withdrawals are processed quickly. It’s a solid choice for both beginners and more experienced traders looking for reliability.",
     rating: 5
   },
   {
-    name: "Sara M",
-    text: "SGFX offers smooth trading on MT5 with competitive spreads. I especially like how quick and hassle-free the withdrawal process is.",
+    name: "Sara Melody",
+    text: "SGFX provides a smooth trading experience on MT5 with stable execution and tight spreads. What I appreciate most is the fast withdrawal process and responsive support team. It makes trading feel secure and convenient on a daily basis.",
     rating: 5
   },
   {
-    name: "John Deer",
-    text: "Very reliable broker. Account setup was simple, and customer support is responsive. Trading conditions are solid for forex and stocks.",
+    name: "John Samson",
+    text: "Signing up with SGFX was quick and straightforward. The platform works efficiently, and I haven’t faced any major issues so far. Customer service is helpful, and overall trading conditions are quite competitive compared to other brokers I’ve tried.",
     rating: 4
   },
   {
     name: "Fatima A",
-    text: "I’ve been using SGFX for a few months—execution is fast and pricing is fair. Definitely a trustworthy broker in the UAE.",
+    text: "After a few months of trading with SGFX, I can say execution speed and pricing are very good. The platform runs smoothly, and I feel confident trading here. It’s a reliable broker with a user-friendly environment for consistent trading.",
     rating: 5
   },
   {
     name: "Omar Hassan",
-    text: "User-friendly platform with great features. The demo account helped me learn before going live. Highly recommend SGFX for new traders.",
+    text: "SGFX is ideal for beginners thanks to its simple interface and helpful demo account. I was able to practice before trading live, which really helped. The transition to a real account was seamless, and overall experience has been very positive.",
     rating: 5
   },
   {
-    name: "Daniel Estephan",
-    text: "Deposits and withdrawals are seamless with SGFX. Spreads are low, and leverage options are flexible. Overall a good trading experience.",
+    name: "Daniel Ronald",
+    text: "Depositing and withdrawing funds with SGFX has been very easy and fast. The spreads are competitive, and leverage options give flexibility in trading strategies. It’s a well-rounded broker that offers a smooth and efficient trading experience overall.",
     rating: 5
   },
   {
-    name: "Lina Sidny",
-    text: "SGFX stands out for its transparency and ease of use. MT5 platform works smoothly, and I’ve had no issues so far.",
+    name: "Lina S",
+    text: "What stands out about SGFX is its transparency and ease of use. The MT5 platform performs well without lag, and I’ve had no issues executing trades. It’s a dependable option for traders who want a simple yet effective platform.",
     rating: 4
   },
   {
     name: "Hassan Tarik",
-    text: "Good broker with fast execution and decent spreads. Customer support is helpful and resolves issues quickly.",
+    text: "SGFX offers fast execution and decent spreads, making it suitable for active traders. Customer support is responsive and helpful whenever needed. Overall, it’s a good broker that provides a stable trading environment and a straightforward user experience.",
     rating: 5
   },
   {
-    name: "Emily W",
-    text: "I like how easy it is to start trading with SGFX. The process is straightforward, and the platform is stable.",
+    name: "Emily Stephan",
+    text: "Getting started with SGFX was very simple. The registration process is quick, and the platform is easy to understand. I’ve found it reliable for day-to-day trading, and everything from execution to withdrawals has worked smoothly for me.",
     rating: 5
   },
   {
-    name: "Yousef Ali",
-    text: "Professional and efficient broker. Withdrawals are processed quickly, and the trading environment is reliable. Would recommend SGFX.",
+    name: "Yousef Noreen S",
+    text: "SGFX delivers a professional trading experience with quick withdrawals and stable performance. The platform is efficient, and I feel comfortable trading regularly. It’s a trustworthy broker that offers good conditions for both new and experienced traders.",
     rating: 5
   }
 ];
-
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -82,7 +81,8 @@ export function Testimonials() {
   const dragStartX = useRef(0)
   const dragStartLeft = useRef(0)
   const currentIndexRef = useRef(0)  // ← keep a ref in sync for use inside intervals
-
+const touchStartX = useRef(0)
+const touchEndX = useRef(0)
   const getVisibleCount = () =>
     typeof window !== "undefined" && window.innerWidth <= 700 ? 1 : 3
 
@@ -166,6 +166,31 @@ export function Testimonials() {
     startAuto()
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+  touchStartX.current = e.touches[0].clientX
+  stopAuto()
+}
+
+const handleTouchMove = (e: React.TouchEvent) => {
+  touchEndX.current = e.touches[0].clientX
+}
+
+const handleTouchEnd = () => {
+  const diff = touchStartX.current - touchEndX.current
+
+  // swipe threshold (adjust if needed)
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
+      // swipe left → next
+      goTo(currentIndexRef.current + 1)
+    } else {
+      // swipe right → prev
+      goTo(currentIndexRef.current - 1)
+    }
+  }
+
+  startAuto()
+}
   return (
     <section className="bg-[#3DB98A] py-8 md:py-10 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto max-w-5xl">
@@ -174,6 +199,9 @@ export function Testimonials() {
         <div className="overflow-hidden">
           <div
             ref={trackRef}
+            onTouchStart={handleTouchStart}
+  onTouchMove={handleTouchMove}
+  onTouchEnd={handleTouchEnd}
             className="flex gap-3 transition-transform duration-500 ease-in-out"
           >
             {testimonials.map((t, i) => (
