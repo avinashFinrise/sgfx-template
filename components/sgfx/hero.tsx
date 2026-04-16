@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 export function Hero() {
   return (
@@ -47,7 +49,7 @@ export function Hero() {
             <p className="text-white font-medium text-2xl md:text-3xl lg:text-4xl mb-5">
               Upto $25,000
             </p>
-            <button className="bg-[#13AA7A] hover:bg-[#0f9369] text-white font-semibold px-2 py-1 lg:px-8 lg:py-3 rounded-2xl text-lg lg:text-xl uppercase tracking-wide transition-colors">
+            <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#0f9369] text-white font-semibold px-2 py-1 lg:px-8 lg:py-3 rounded-2xl text-lg lg:text-xl uppercase tracking-wide transition-colors">
               CLAIM BONUS
             </button>
           </div>

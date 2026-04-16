@@ -160,7 +160,7 @@ export function WhyChoose() {
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-[#156AE4] hover:bg-[#1259c0] text-white font-semibold px-5 py-2 rounded-2xl text-md transition-colors">
+          <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#156AE4] hover:bg-[#1259c0] text-white font-semibold px-5 py-2 rounded-2xl text-md transition-colors">
             TRADE NOW
           </button>
         </div>

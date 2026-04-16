@@ -171,7 +171,7 @@ function AccountCard({ account }: { account: typeof accountTypes[0] }) {
           </div>
 
           {/* Button */}
-          <button className="w-full bg-[#1F2937] hover:bg-black text-white font-semibold py-2 rounded-full text-lg transition-colors">
+          <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="w-full bg-[#1F2937] hover:bg-black text-white font-semibold py-2 rounded-full text-lg transition-colors">
             Open Account
           </button>
 

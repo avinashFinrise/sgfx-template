@@ -243,7 +243,7 @@ const handleTouchEnd = () => {
         <div className="text-center mt-8">
           <h3 className="text-white text-xl font-bold mb-0.5">Start Trading with confidence</h3>
           <p className="text-white/80 text-sm mb-4">Open an Account in minutes</p>
-          <button className="border-2 border-[#156AE4] bg-[#156AE4] hover:bg-[#156AE4]/70 text-white font-bold px-6 py-2 rounded-2xl text-sm transition-colors uppercase">
+          <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="border-2 border-[#156AE4] bg-[#156AE4] hover:bg-[#156AE4]/70 text-white font-bold px-6 py-2 rounded-2xl text-sm transition-colors uppercase">
             TRY FREE DEMO
           </button>
         </div>

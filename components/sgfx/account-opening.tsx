@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 
 const steps = [
@@ -70,7 +72,7 @@ export function AccountOpening() {
                   {step.description}
                 </p>
 
-                <button className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-4 py-2 rounded-2xl text-[15px] transition-colors mx-auto w-36">
+                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-4 py-2 rounded-2xl text-[15px] transition-colors mx-auto w-36">
                   {step.cta}
                 </button>
               </div>
@@ -112,7 +114,7 @@ export function AccountOpening() {
                 <p className="text-[#6b7280] text-xs mb-4 leading-relaxed flex-1">
                   {step.description}
                 </p>
-                <button className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-6 py-1.5 rounded text-xs transition-colors">
+                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-6 py-1.5 rounded text-xs transition-colors">
                   {step.cta}
                 </button>
               </div>

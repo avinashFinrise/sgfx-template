@@ -16,12 +16,12 @@ export function Header() {
           priority
         />
       </Link>
-      <Link
-        href="#"
+      <button
+        onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')}
         className="border border-[#001523] text-[#ffffff] bg-[#001523] hover:bg-[#ffffff] hover:text-[#001523] text-[12px] font-medium px-4 py-0.5 rounded-2xl transition-colors uppercase tracking-wider"
       >
         REGISTER
-      </Link>
+      </button>
     </header>
   )
 }
