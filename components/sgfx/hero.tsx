@@ -1,7 +1,12 @@
 "use client"
 
 import Image from "next/image"
-export function Hero() {
+
+interface HeroProps {
+  title?: string;
+}
+
+export function Hero({ title = "Trade Forex" }: HeroProps) {
   return (
     <section className="relative bg-linear-to-bl from-[#156AE4] to-[#001523] lg:flex lg:flex-col">
       {/* SCA Licensed Badge */}
@@ -41,7 +46,7 @@ export function Hero() {
           {/* Left — text content */}
           <div className="order-2 lg:order-1 text-center lg:text-left lg:w-[45%] z-10">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.15]">
-              Trade Forex
+              {title}
             </h1>
             <p className="text-white font-medium text-2xl md:text-3xl lg:text-4xl mb-0.5">
               with 100% Deposit Bonus

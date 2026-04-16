@@ -9,11 +9,11 @@ import { FAQ } from "@/components/sgfx/faq"
 import { Footer } from "@/components/sgfx/footer"
 import { TrustBadges } from "@/components/sgfx/trust-badges"
 
-export default function SGFXLandingPage() {
+export default function OilPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Hero title="Trade Forex" />
+      <Hero title="Trade Oil" />
       
         <TrustBadges />
       <WhyChoose />

@@ -9,7 +9,7 @@ import { FAQ } from "@/components/sgfx/faq"
 import { Footer } from "@/components/sgfx/footer"
 import { TrustBadges } from "@/components/sgfx/trust-badges"
 
-export default function SGFXLandingPage() {
+export default function ForexPage() {
   return (
     <main className="min-h-screen">
       <Header />
