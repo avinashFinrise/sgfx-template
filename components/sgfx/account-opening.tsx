@@ -85,8 +85,8 @@ export function AccountOpening() {
           {steps.map((step, index) => (
             <div key={index} className="rounded-xl overflow-hidden border border-gray-100 bg-white shadow-sm flex flex-col p-3">
               {/* Dark Header + Gradient Image Section */}
-              <div className="bg-[#0a1628] pt-3 pb-0 flex flex-col items-center rounded-xl">
-                <span className="text-white text-xs font-semibold tracking-wide mb-3">{step.step}</span>
+              <div className="bg-[#0a1628] pt-1 pb-0 flex flex-col items-center rounded-xl">
+                <span className="text-white text-lg font-semibold tracking-wide mb-1">{step.step}</span>
                 {/* Gradient background, image pinned to bottom */}
                 <div
                   className="w-full flex justify-center items-end"

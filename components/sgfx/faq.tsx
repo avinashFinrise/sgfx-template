@@ -26,7 +26,7 @@ export function FAQ() {
   }
 
   return (
-    <section className="py-12 md:py-16 px-4 md:px-8 lg:px-12 relative"
+    <section className="py-8 md:py-12 px-4 md:px-8 lg:px-12 relative"
       style={{
         backgroundImage: "url('/images/faq-bg.png')",
         backgroundSize: "cover",
@@ -35,7 +35,7 @@ export function FAQ() {
         backgroundColor: "#2a2a2a",
       }}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-[#001523] text-2xl md:text-2xl px-5 font-bold text-center mb-6">
+        <h2 className="text-[#ffffff] text-2xl md:text-2xl px-5 font-bold text-center mb-6">
           Frequently Asked Questions
         </h2>
 

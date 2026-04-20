@@ -146,8 +146,18 @@ function AccountCard({ account }: { account: typeof accountTypes[0] }) {
 
           {/* Icon — positioned relative to the outer wrapper so overflow is visible */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-            <div className="w-13 h-13 rounded-full border border-white/50 bg-[#000000] flex items-center justify-center">
-              <Image src={account.icon} alt={account.name} width={34} height={34} />
+            <div className="w-14 h-14 rounded-full border border-white/50 bg-[#000000] flex items-center justify-center overflow-hidden">
+              {account.name === 'Standard' && (
+                <Image src={account.icon} alt={account.name} width={44} height={44} className="w-11 h-11 object-cover" />
+              )}
+              {account.name === 'Elite' && (
+                <div className="ml-1">
+                  <Image src={account.icon} alt={account.name} width={40} height={36} className="w-9 h-9 object-contain" />
+                </div>
+              )}
+              {account.name === 'ECN' && (
+                <Image src={account.icon} alt={account.name} width={46} height={46} className="w-11 h-11 object-cover" />
+              )}
             </div>
           </div>
 

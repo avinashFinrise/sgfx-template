@@ -14,7 +14,7 @@ export function TrustBadges() {
         <span>Secure and Protected</span>
       </div>
       <div className="flex items-center justify-center gap-2 text-white text-md">
-        <svg className="w-5 h-5 text-[#156AE4]" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-7 h-6 text-[#156AE4]" viewBox="0 0 14 22" fill="currentColor">
           <path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
         </svg>
         <span>Execution under 15ms*</span>
