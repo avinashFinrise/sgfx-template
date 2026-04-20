@@ -193,8 +193,8 @@ const handleTouchEnd = () => {
 }
   return (
     <section className="bg-[#3DB98A] py-8 md:py-10 px-4 md:px-8 lg:px-12">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-white text-2xl font-bold text-center mb-6">Testimonials</h2>
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-6">Testimonials</h2>
 
         <div className="overflow-hidden">
           <div
@@ -240,7 +240,7 @@ const handleTouchEnd = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6">
           <h3 className="text-white text-xl font-bold mb-0.5">Start Trading with confidence</h3>
           <p className="text-white/80 text-sm mb-4">Open an Account in minutes</p>
           <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="border-2 border-[#156AE4] bg-[#156AE4] hover:bg-[#156AE4]/70 text-white font-bold px-6 py-2 rounded-2xl text-sm transition-colors uppercase">

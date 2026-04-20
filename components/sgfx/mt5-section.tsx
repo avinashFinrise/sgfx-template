@@ -2,8 +2,8 @@ import Image from "next/image"
 
 export function MT5Section() {
   return (
-    <section className="bg-white  ">
-      <div className="container mx-auto max-w-3xl">
+    <section className="bg-white px-auto pt-6">
+      <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between gap-2 md:gap-6">
           {/* Left Content */}
           <div className="py-4 md:py-12 lg:pt-12 text-center md:text-left">

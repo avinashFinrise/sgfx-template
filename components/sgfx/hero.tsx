@@ -27,25 +27,25 @@ export function Hero({ title = "Trade Forex" }: HeroProps) {
         </div>
       </div>
 
-      {/* Only desktop gets full-width padding and flex-1 stretch */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-20 xl:px-28 pb-6 pt-4 md:py-30 lg:py-39 max-w-5xl lg:max-w-none lg:flex-1 lg:flex lg:flex-col">
-        <div className="flex flex-col lg:flex-row items-center justify-between lg:flex-1">
+      
+      <div className="container mx-auto md:px-8 lg:px-12 xl:px-16 2xl:px-24 pb-6 pt-6 max-w-screen-2xl">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-16">
 
           {/* Right — coins image */}
-          <div className="order-1 lg:order-2 lg:w-[55%] flex justify-center lg:justify-end mt-4 lg:mt-0 lg:self-stretch lg:items-center">
+          <div className="order-1 lg:order-2 lg:w-[48%] flex justify-center lg:justify-end mt-4 lg:mt-0 lg:self-stretch lg:items-center">
             <Image
               src="/images/coins.png"
               alt="Currency coins - Dollar, Euro, Pound, Rupee, Yen"
               width={560}
               height={440}
-              className="w-full max-w-[260px] md:max-w-[320px] lg:max-w-[520px] xl:max-w-[560px] object-contain"
+              className="w-full max-w-[360px] md:max-w-[360px] lg:max-w-[520px] xl:max-w-[560px] object-contain"
               priority
             />
           </div>
 
           {/* Left — text content */}
           <div className="order-2 lg:order-1 text-center lg:text-left lg:w-[45%] z-10">
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.15]">
+            <h1 className="text-white text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.15]">
               {title}
             </h1>
             <p className="text-white font-medium text-2xl md:text-3xl lg:text-4xl mb-0.5">
@@ -54,7 +54,7 @@ export function Hero({ title = "Trade Forex" }: HeroProps) {
             <p className="text-white font-medium text-2xl md:text-3xl lg:text-4xl mb-5">
               Upto $25,000
             </p>
-            <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#0f9369] text-white font-semibold px-2 py-1 lg:px-8 lg:py-3 rounded-2xl text-lg lg:text-xl uppercase tracking-wide transition-colors">
+            <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="mt-4 bg-[#13AA7A] hover:bg-[#0f9369] text-white font-semibold px-2 py-1 lg:px-8 lg:py-3 rounded-2xl text-lg lg:text-xl uppercase tracking-wide transition-colors">
               CLAIM BONUS
             </button>
           </div>

@@ -34,7 +34,7 @@ export function FAQ() {
         backgroundRepeat: "no-repeat",
         backgroundColor: "#2a2a2a",
       }}>
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-[#001523] text-2xl md:text-2xl px-5 font-bold text-center mb-6">
           Frequently Asked Questions
         </h2>

@@ -31,8 +31,8 @@ const steps = [
 
 export function AccountOpening() {
   return (
-    <section className="bg-[#EEEEEE] py-8 md:py-12 px-4 md:px-8 lg:px-12">
-      <div className="container mx-auto max-w-4xl">
+    <section className="bg-[#EEEEEE] py-8 md:py-10 px-4 md:px-8 lg:px-12">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-[#001523] text-3xl md:text-4xl font-bold text-center mb-6">
           Fast Account Opening
         </h2>
@@ -40,9 +40,9 @@ export function AccountOpening() {
         {/* Mobile: Vertical Stack */}
         <div className="flex flex-col gap-6 md:hidden">
           {steps.map((step, index) => (
-            <div key={index} className="rounded-xl overflow-hidden border border-gray-100 shadow-sm flex flex-col">
+            <div key={index} className="rounded-xl overflow-hidden border bg-white border-gray-100 shadow-sm flex flex-col p-2">
               {/* Dark Header Badge */}
-              <div className="bg-[#0a1628]  pt-1 pb-0 flex flex-col items-center">
+              <div className="bg-[#0a1628] rounded-xl pt-1 pb-0 flex flex-col items-center">
                 <span className="text-white text-lg font-semibold tracking-wide mb-1">{step.step}</span>
                 {/* Image touches the bottom of this section */}
                 <div
@@ -66,13 +66,13 @@ export function AccountOpening() {
               </div>
 
               {/* Content — fixed min-height for alignment */}
-              <div className="bg-white px-4 pb-5 pt-4 flex flex-col text-left flex-1">
+              <div className="bg-white px-2 pb-5 pt-4 flex flex-col text-left flex-1">
                 <h3 className="text-[#001523] font-bold text-lg mb-1">{step.title}</h3>
-                <p className="text-[#424244] font-bold text-md mb-4 leading-relaxed max-w-[300px] ">
+                <p className="text-[#424244] font-bold text-md mb-4 leading-relaxed  ">
                   {step.description}
                 </p>
 
-                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-4 py-2 rounded-2xl text-[15px] transition-colors mx-auto w-36">
+                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-2 py-2 rounded-2xl text-[15px] transition-colors mx-auto w-36">
                   {step.cta}
                 </button>
               </div>
@@ -81,11 +81,11 @@ export function AccountOpening() {
         </div>
 
         {/* Desktop: Horizontal Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-5 items-stretch">
+        <div className="hidden md:grid md:grid-cols-3 gap-6 mx-2 items-stretch">
           {steps.map((step, index) => (
-            <div key={index} className="rounded-xl overflow-hidden border border-gray-100 shadow-sm flex flex-col">
+            <div key={index} className="rounded-xl overflow-hidden border border-gray-100 bg-white shadow-sm flex flex-col p-3">
               {/* Dark Header + Gradient Image Section */}
-              <div className="bg-[#0a1628] pt-3 pb-0 flex flex-col items-center">
+              <div className="bg-[#0a1628] pt-3 pb-0 flex flex-col items-center rounded-xl">
                 <span className="text-white text-xs font-semibold tracking-wide mb-3">{step.step}</span>
                 {/* Gradient background, image pinned to bottom */}
                 <div
@@ -109,12 +109,12 @@ export function AccountOpening() {
               </div>
 
               {/* Content — equal height across all cards */}
-              <div className="bg-white px-4 pb-5 pt-4 flex flex-col items-center text-center flex-1">
-                <h3 className="text-[#001523] font-bold text-sm mb-1.5">{step.title}</h3>
-                <p className="text-[#6b7280] text-xs mb-4 leading-relaxed flex-1">
+              <div className="bg-white px-2 pb-5 pt-2 flex flex-col items-center text-start flex-1">
+                <h3 className="text-[#001523] font-bold text-sm mb-1.5 w-full ">{step.title}</h3>
+                <p className="text-[#424244] font-bold text-xs mb-4 leading-relaxed w-full flex-1">
                   {step.description}
                 </p>
-                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-6 py-1.5 rounded text-xs transition-colors">
+                <button onClick={() => window.open('https://client.sgfx.com/#/login?mode=register', '_blank')} className="bg-[#13AA7A] hover:bg-[#1259c0] text-white font-semibold px-2 py-1.5 rounded-2xl text-xs transition-colors mx-auto w-32">
                   {step.cta}
                 </button>
               </div>

@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="bg-white py-4 px-4 md:px-8 lg:px-12 border-t border-gray-100 pb-12">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-[8px] md:text-[10px] text-[#333333] space-y-2 leading-relaxed">
           <div>
             <span className="font-bold text-[#001523]">Risk Warning:</span>
