@@ -28,7 +28,7 @@ export function Hero({ title = "Trade Forex" }: HeroProps) {
       </div>
 
       
-      <div className="container mx-auto md:px-8 lg:px-12 xl:px-16 2xl:px-24 pb-6 pt-6 max-w-screen-2xl">
+      <div className="container mx-auto md:px-8 lg:px-12 xl:px-16 2xl:px-24 pb-6 pt-6 lg:pt-8 lg:pb-0 max-w-screen-2xl">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-16">
 
           {/* Right — coins image */}
